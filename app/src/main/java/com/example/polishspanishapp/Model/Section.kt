@@ -1,6 +1,6 @@
 package com.example.polishspanishapp.Model
 
-class Section(private var title: String, private var title_spanish: String, private var image: Int) {
+class Section(private var title: String, private var title_spanish: String, private var image: Int, private var words: ArrayList<Word>) {
     fun getTitle(): String{
         return this.title
     }
@@ -9,5 +9,8 @@ class Section(private var title: String, private var title_spanish: String, priv
     }
     fun getImage(): Int{
         return this.image
+    }
+    fun getWords(): ArrayList<Word>{
+        return this.words
     }
 }
