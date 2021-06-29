@@ -3,20 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp">
+    android:layout_height="wrap_content">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardElevation="3dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <!-- Media -->
         <ImageView
+            android:id="@+id/iv_image"
             android:layout_width="match_parent"
             android:layout_height="194dp"
             app:srcCompat="@drawable/ic_launcher_background"
@@ -29,18 +31,20 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-        <!-- Title, secondary and supporting text -->
         <TextView
+            android:id="@+id/tv_option"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option"
+            android:text="@string/option"
             android:textAppearance="?attr/textAppearanceHeadline6"
             />
+
         <TextView
+            android:id="@+id/tv_option_spanish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Option in spanish"
+            android:text="@string/option_in_spanish"
             android:textAppearance="?attr/textAppearanceBody2"
             android:textColor="?android:attr/textColorSecondary"
             />

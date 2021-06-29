@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Polish Spanish App</string>
+    <string name="option">Option</string>
+    <string name="option_in_spanish">Option in spanish</string>
 </resources>
