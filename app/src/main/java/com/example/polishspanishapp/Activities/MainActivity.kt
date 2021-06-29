@@ -1,7 +1,8 @@
-package com.example.polishspanishapp
+package com.example.polishspanishapp.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.polishspanishapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
