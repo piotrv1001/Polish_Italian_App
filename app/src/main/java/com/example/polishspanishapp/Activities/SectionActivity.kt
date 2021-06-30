@@ -1,5 +1,6 @@
 package com.example.polishspanishapp.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -17,9 +18,22 @@ class SectionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_section)
 
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left)
+
         val list = Data.getSections()
         val position = intent.getIntExtra("Position", 0)
         val section = list[position]
+        val section_name = section.getTitle()
+
+        setSupportActionBar(toolbar)
+        val actionbar = supportActionBar
+        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar?.title = section_name
+        toolbar.setNavigationOnClickListener{
+            val intent2 = Intent(this, MainActivity::class.java)
+            startActivity(intent2)
+        }
+
         val list_of_words = section.getWords()
         rv_words.layoutManager = LinearLayoutManager(this)
         rv_words.adapter = WordsAdapter(this, list_of_words)
