@@ -44,20 +44,12 @@ class WordsAdapter(val context: Context, val items: ArrayList<Word>): RecyclerVi
             .into(holder.word_image)
 
         holder.btn_expand.setOnClickListener {
-            if(holder.expand_layout.visibility == View.VISIBLE){
-                holder.btn_expand.animate().apply{
-                    duration = 200
-                    rotationXBy(-180f)
-                }.start()
-                TransitionManager.beginDelayedTransition(holder.card_view, AutoTransition())
-                holder.expand_layout.visibility = View.GONE
-            }else{
-                holder.btn_expand.animate().apply{
-                    duration = 200
-                    rotationXBy(180f)
-                }.start()
+            if(holder.expand_layout.visibility == View.GONE){
                 TransitionManager.beginDelayedTransition(holder.card_view, AutoTransition())
                 holder.expand_layout.visibility = View.VISIBLE
+            }else{
+
+                holder.expand_layout.visibility = View.GONE
             }
         }
     }

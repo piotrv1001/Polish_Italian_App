@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
@@ -54,14 +53,6 @@
                     android:textSize="16sp"
                     android:padding="5dp"
                     android:textStyle="bold"
-                    android:layout_margin="5dp"/>
-
-                <Button
-                    android:id="@+id/btn_expand"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:background="@drawable/outline_expand_more_24"
                     android:layout_margin="5dp"/>
 
             </LinearLayout>
@@ -146,6 +137,26 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#88888888"
+                android:layout_marginTop="18dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <Button
+                android:id="@+id/btn_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Przykłady"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/primaryColor"
+                android:background="@drawable/ripple_effect"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"/>
 
         </LinearLayout>
 
