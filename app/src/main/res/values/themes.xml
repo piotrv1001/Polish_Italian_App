@@ -14,4 +14,8 @@
         <!-- Customize your theme here. -->
 
     </style>
+
+    <style name="CustomAppBarStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+    </style>
 </resources>

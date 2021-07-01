@@ -48,7 +48,6 @@ class WordsAdapter(val context: Context, val items: ArrayList<Word>): RecyclerVi
                 TransitionManager.beginDelayedTransition(holder.card_view, AutoTransition())
                 holder.expand_layout.visibility = View.VISIBLE
             }else{
-
                 holder.expand_layout.visibility = View.GONE
             }
         }

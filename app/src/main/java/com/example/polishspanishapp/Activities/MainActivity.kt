@@ -18,8 +18,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right)
-
         val sectionList = Data.getSections()
         rv_options.layoutManager = GridLayoutManager(this, 2)
         rv_options.adapter = CardViewAdapter(this, sectionList)
